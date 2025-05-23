@@ -1,4 +1,5 @@
 import Header from "./components/header"
+import Titulo from "./components/titulo"
 import Button from "./components/button";
 import {Formateardinero, Calcularpagototal} from "./helpers/index.js";
 
@@ -58,8 +59,11 @@ function App() {
 
    return (
      <>
-     <div className='my-20 max-w-lg mx-auto bg-white shadow-900 p-10'>         
+     <div className='my-20 max-w-lg mx-auto bg-white shadow p-10 rounded-lg'>       
+        
         <Header/>
+        <br />
+        <Titulo/>
 
         <div className="flex justify-between my-6">
 
@@ -71,16 +75,7 @@ function App() {
             operation='+'
             fn = {handleClickIncrement}
           />
-
-          {/* <button type="button" className='h-10 w-10 flex items-center justify-center font-bold text-white text-2xl bg-line-600 rounded-full
-          hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-indigo-600' onClick={handleClickDecrement}>
-            -
-          </button>
-
-          <button type="button" className="h-10 w-10 flex items-center justify-center font-bold text-white text-2xl bg-line-600 rounded-full
-          hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-indigo-600 " onClick={handleClickIncrement}>
-            +
-          </button> */}
+          
         </div>
 
         <input type="range"
@@ -93,7 +88,7 @@ function App() {
         />
         <p className='text-center my-10 text-5xl font-extrabold text-indigo-600'>{Formateardinero(cantidad)}</p>
 
-        <h2 className='text-center my-10 text-5xl font-extrabold text-indigo-600'>
+        <h2 className='text-center my-10 text-5xl font-extrabold text-gray-500'>
             Elige un <span className="text-indigo-600">Plazo </span>  a pagar 
         </h2>
 
